@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Barlow&display=swap');
+
+html {
+  height: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Barlow', 'Barlow Condensed' sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero{
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text {
+  font-size: 46px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  margin-top: 25%;
+  padding: 4px;
+  text-align: left;
+}
+.hero-cup {
+  margin-left: 1px;
+}
+span.underline {
+  text-decoration: underline;
+}
+
+#steam_1{
+  animation-name: steam_1;
+  animation-delay: .2s;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: relative;
+}
+#steam_2{
+  animation-name: steam_2;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: relative;
+}
+#steam_3{
+  animation-name: steam_3;
+  animation-delay: .4s;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+@keyframes steam_1{
+  0% {
+      opacity: 0;
+      transform: translateY(0px);
+  }
+  50% {
+      opacity: 1;
+
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-25px);
+  }
+}
+@keyframes steam_2{
+  0% {
+      opacity: 0;
+      transform: translateY(0px);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-25px);
+  }
+}
+@keyframes steam_3{
+  0% {
+      opacity: 0;
+      transform: translateY(0px);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-25px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero{
+    padding-bottom: 5px;
+  }
+  .hero-body{
+    padding: 0px 0px 0px 0px;
+  }
+  .hero-text {
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #pink_cup_steam {
+    width: 75%;
+    height: 75%;
+  }
+}
+
+.section {
+  padding-bottom: 100px;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+span.html {
+  background: #F16529;
+}
+
+span.css {
+  background: #66D3FA;
+}
+
+span.js {
+  background: #F0DB4F;
+}
+
+span.react {
+  background: #61DBFB;
+}
+span.bulma {
+  background: #00D1B2;
+}
+span.mma {
+  background: #C9F943;
+}
+.p-text {
+  font-family: 'Barlow', sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 16px;
+}
+.profile-pic {
+  height: 100%;
+  display: flex;
+  align-items: middle;
+  justify-content: center;
+}
+.welcome-row{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.welcome-text {
+  width: 60%;
+  font-family: 'Barlow', sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 16px;
+}
+.courses{
+  /* border: 1px solid lightblue; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.course_1{
+  position: relative;
+  top: 0px;
+  left: 160px;
+  transform: rotate(-10deg);
+  transition: transform .25s ease-in-out;
+  transform-origin: left top;
+}
+.course_2{
+  position: relative;
+  top: -10px;
+  left: 20px;
+  transform: rotate(25deg);
+  transition: transform .25s ease-in-out;
+  /* transition: .3s; */
+}
+.course_3{
+  position: relative;
+  left: -160px;
+  transform: rotate(5deg);
+  transition: transform .25s ease-in-out;
+  transform-origin: left top;
+}
+.courses:hover .course_1{
+  transform: translate3d(60px, -170px, 0px) rotateZ(0deg);
+}
+.courses:hover .course_2{
+  transform: rotateZ(0deg);
+}
+.courses:hover .course_3{
+  transform: translate3d(-20px, 150px, 0px) rotateZ(0deg);
+}
+.courses-button {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.courses-link {
+  font-weight: bold;
+  color:  rgb(233,115,175);
+  text-decoration: underline;
+}
+
+.contact {
+  /* background: rgb(54,0,131);
+  background: linear-gradient(135deg, rgba(54,0,131,1) 0%, rgba(107,0,201,1) 100%); */
+  background: rgb(233,115,175);
+  background: linear-gradient(135deg, rgba(233,115,175,1) 0%, rgba(255,201,120,1) 100%);
+}
+
+.contact-text {
+  font-family: Barlow;
+  font-size: 35px;
+  font-weight: 300;
+  color: #fff;
+  padding-bottom: 70px;
+}
+
+.contact-icons {
+  color: #fff;
+  transition: .15s ease-in-out;
+  will-change: transform;
+}
+
+.contact-icons:hover {
+  transform: scale(1.3);
+}
+
+.tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.tooltip .cv {
+  font-family: 'Barlow', sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tooltip .tooltiptext {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 40%;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.9;
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .course_1{
+    height: 150px;
+    width: 194px;
+    margin: 30px;
+  }
+  .course_2{
+    height: 150px;
+    width: 194px;
+    margin: 30px;
+  }
+  .course_3{
+    height: 150px;
+    width: 194px;
+    margin: 30px;
+  }
+  .courses:hover .course_1{
+    transform: translate3d(-100px, 0px, 0px) rotateZ(0deg);
+  }
+  .courses:hover .course_2{
+    transform: translate3d(0px, 10px, 0px) rotateZ(0deg);
+  }
+  .courses:hover .course_3{
+    transform: translate3d(140px, 0px, 0px) rotateZ(0deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .course_1{
+    position: relative;
+    top: 5px;
+    left: 50px;
+    height: 77px;
+    width: 100px;
+    transform: rotate(-20deg);
+  }
+  .course_2{
+    position: relative;
+    top: -5px;
+    left: 10px;
+    height: 77px;
+    width: 100px;
+    transform: rotate(25deg);
+  }
+  .course_3{
+    position: relative;
+    left: -60px;
+    height: 77px;
+    width: 100px;
+    transform: rotate(-5deg);
+  }
+  .courses:hover .course_1{
+    transform: translate3d(-55px, 0px, 0px) rotateZ(0deg);
+  }
+  .courses:hover .course_2{
+    transform: translate3d(-10px, 10px, 0px) rotateZ(0deg);
+  }
+  .courses:hover .course_3{
+    transform: translate3d(65px, 5px, 0px) rotateZ(0deg);
+  }
+  .contact-text {
+    font-size: 26px;
+  }
+  .p-text {
+    font-size: 14px;
+  }
+  .contact-icons {
+    font-size: 2em;
+  }
+}
