@@ -13,11 +13,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* HERO SECTION */
+
 .hero{
   padding-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.hero-container{}
+.hero-columns{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.hero-column{
+  padding: 20px;
 }
 .hero-text {
   font-size: 46px;
@@ -99,44 +109,38 @@ span.underline {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .hero{
-    padding-bottom: 5px;
-  }
-  .hero-body{
-    padding: 0px 0px 0px 0px;
-  }
-  .hero-text {
-    font-size: 26px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  #pink_cup_steam {
-    width: 75%;
-    height: 75%;
-  }
-}
+/* HOME SECTIONS */
 
 .section {
   padding-bottom: 100px;
 }
-
+.section-container{
+}
+.section-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.section-columns{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.section-column{
+  padding: 50px;
+}
 span.bold {
   font-weight: bold;
 }
-
 span.html {
   background: #F16529;
 }
-
 span.css {
   background: #66D3FA;
 }
-
 span.js {
   background: #F0DB4F;
 }
-
 span.react {
   background: #61DBFB;
 }
@@ -173,11 +177,12 @@ span.mma {
 }
 .courses{
   /* border: 1px solid lightblue; */
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  vertical-align: middle;
+  padding-left: 30px;
+  height: 100%;
+  width: 200px;
 }
 .course_1{
   position: relative;
@@ -218,12 +223,13 @@ span.mma {
   justify-content: center;
   vertical-align: middle;
 }
-
 .courses-link {
   font-weight: bold;
   color:  rgb(233,115,175);
   text-decoration: underline;
 }
+
+/* CONTACT SECTION */
 
 .contact {
   /* background: rgb(54,0,131);
@@ -231,38 +237,42 @@ span.mma {
   background: rgb(233,115,175);
   background: linear-gradient(135deg, rgba(233,115,175,1) 0%, rgba(255,201,120,1) 100%);
 }
-
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.contact-section-columns{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.contact-section-column{}
 .contact-text {
   font-family: Barlow;
   font-size: 35px;
   font-weight: 300;
   color: #fff;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
 }
-
 .contact-icons {
   color: #fff;
   transition: .15s ease-in-out;
   will-change: transform;
 }
-
 .contact-icons:hover {
   transform: scale(1.3);
 }
-
 .tooltip {
   display: flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
 }
-
 .tooltip .cv {
   font-family: 'Barlow', sans-serif;
   font-weight: bold;
   color: #fff;
 }
-
 .tooltip .tooltiptext {
   font-family: 'Barlow', sans-serif;
   font-size: 14px;
@@ -281,12 +291,47 @@ span.mma {
   opacity: 0;
   transition: opacity 0.5s;
 }
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 0.9;
 }
+
+/* MEDIA QUERIES */
+
 @media screen and (min-width: 601px) and (max-width: 768px) {
+  .hero-columns{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .hero-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+  }
+  #pink_cup_steam{
+    height: 300px;
+  }
+  .hero-text{
+    font-size: 36px;
+    text-align: center;
+    padding: 0px 60px 0px 60px;
+  }
+  .section-title img{
+    width: 550px;
+  }
+  .section-columns{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .section-column{
+    padding: 10px 30px 10px 30px;
+  }
+  .courses{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .course_1{
     height: 150px;
     width: 194px;
@@ -314,6 +359,21 @@ span.mma {
 }
 
 @media screen and (max-width: 600px) {
+  .hero{
+    padding-bottom: 5px;
+  }
+  .hero-body{
+    padding: 0px 0px 0px 0px;
+  }
+  .hero-text {
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #pink_cup_steam {
+    width: 75%;
+    height: 75%;
+  }
   .course_1{
     position: relative;
     top: 5px;
